@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion event</title>
+    <link href="https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+</head>
+<style>
+     *{
+    margin: 0;
+    padding: 0;
+    }
+    body {
+        margin: 0px;
+        padding: 0px;
+        background-image: url(' https://t4.ftcdn.net/jpg/02/86/49/97/360_F_286499797_9Sry5UWwZCA7lzDciS98e1xb7o5KNnCM.jpg');
+        background-repeat: no-repeat;
+        background-attachment: local;
+        background-size: cover;
+        opacity: 2;
+    }
+    #navbar{
+        position: sticky;
+        top:0px;
+        
+    }
+    #navbar ul{
+        display: flex;
+        list-style: none;
+        padding: 0px 0px 0px 1000px;
+    
+      
+    }
+    #navbar ul li{
+        margin:15px 25px;
+        font-size: 1.5rem;
+        border-radius: 10px;
+        color: white;
+    }
+    #navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.7;
+    padding: 0px;
+}
+ 
+#navbar ul li button{
+    padding:10px;
+    color: black;
+    border-radius: 16px;
+
+}   
+
+
+    .image img {
+        border-radius: 17px;
+        margin: 0px 0px 20px -228px;
+    }
+
+    .container {
+        display: grid;
+        height: 568px;
+        width: 1000px;
+        position: relative;
+        margin: auto;
+        top: 120px;
+        left: 171px;
+       
+    }
+
+    .heading {
+        position: absolute;
+        top: 20px;
+        left: 350px;
+        background: silver;
+        border-radius: 37px;
+        background-image: linear-gradient(45deg, #c90909, transparent);
+        padding: 0px 26px 14px 0px;
+    }
+    .heading h1{
+        margin:20px 0px 0px 30px;
+    }
+
+    .para {
+        position: absolute;
+        top:  120px;
+         left: 150px;
+        align-items: center;
+        font-family: 'Viaoda Libre', cursive;
+        color: black;
+        backdrop-filter: invert(1);
+        font-size: 30px;
+        border: 2px solid black;
+        border-radius: 25px;
+        padding:20px;
+       
+    }
+    .reg{
+      position:absolute;
+      right:500px;
+      bottom: 120px;
+  }
+  .reg button{
+      background-color: blueviolet;
+      color: cornsilk;
+      padding:15px;
+      border-radius: 20px;
+      
+  }
+  .reg button:hover{
+       background-color: rgb(141, 95, 184);
+       color: cornsilk;
+  }
+  .menubtn{
+      padding:10px 30px;
+  }
+  .logooo{
+     position:absolute;
+     left:20px;
+     top:5px;
+ }
+ .menudrop{
+  float: left;
+  overflow: hidden;
+  font-size: 0.8rem;
+}
+.menudrop:hover{
+    background-color:#F3C693 ;
+}
+
+
+.menudrop .menubtn {
+  font-size: 16px;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 8px 16px;
+    background-color:#F3C693 ;
+    font-family: inherit;
+    margin: 10px 100px;
+    border-radius: 10px;
+}
+.menu-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  
+}
+ 
+.menu-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.menu-content a:hover {
+  background-color: #ddd;
+}
+
+.menudrop:hover .menu-content {
+  display: block;
+}
+   
+</style>
+
+<body>
+    <nav id="navbar">
+        
+        <ul class="items">
+            <div class="menudrop"> 
+            <li> <button class="menubtn" >Menu</button></li>
+            <div class="menu-content">
+                <a href="/home">HOME</a>
+                <a href="/gallery">OUR GALLERY</a>
+                <a href="/events">EVENTS</a>
+                <a href="/contact">CONTACT US</a>
+              </div>
+            </div>
+              <li class="logooo"> <img src=" https://thumbs.dreamstime.com/b/hm-logo-monogram-shield-shape-isolated-blue-colors-outline-design-template-179292471.jpg" alt="" height="40px" width="40px" ></li>
+            
+            
+            </ul>
+
+    </nav>
+    <div class="container">
+        <div class="image">
+            <img src="https://i.pinimg.com/564x/1f/64/45/1f6445df5a2cc75a157a5f58d2466a49.jpg" alt="" height="450px" width="300px">
+        </div>
+        <div class="heading">
+            <h1><b>Fasshonshō</b></h1>
+        </div>
+        <div class="para">
+            <p>"Fashion is the armor to survive the reality of  every <br> day life"
+                Fasshonshō is the fashion event of <br> <i>Hi Matsuri</i>. So ladies and gentleman <br> pick up your
+                version and lit the stage <br> on fire and keep it charming</p>
+        </div>
+        <div class="reg">
+            <button class="btn"><a href="/register">Register Now</a></button>
+        </div>
+    </div>
+</body>
+
+</html>

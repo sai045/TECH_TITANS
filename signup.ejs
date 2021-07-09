@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Signup form</title>
+ </head>
+ <style>
+    *{
+    margin: 0;
+    padding: 0;
+    }
+  body{
+    background-image: url('https://p4.wallpaperbetter.com/wallpaper/897/69/123/portgas-d-ace-one-piece-anime-boys-anime-wallpaper-preview.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #navbar{
+        position: sticky;
+        top:0px;
+        
+    }
+    #navbar ul{
+        display: flex;
+        list-style: none;
+        padding: 0px 0px 0px 1000px;
+        margin:0px ;
+    
+      
+    }
+    #navbar ul li{
+        margin:15px 25px;
+        font-size: 1.5rem;
+        border-radius: 10px;
+        color: white;
+    }
+    #navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.7;
+    padding: 0px;
+}
+ 
+#navbar ul li button{
+    padding:10px;
+    color: black;
+    border-radius: 16px;
+
+}    
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: poppins;
+	font-size: 16px;
+	color: #fff;
+}
+.formbox {
+	background-color: rgba(0, 0, 0, 0.5);
+	margin: auto auto;
+	padding: 40px;
+	border-radius: 5px;
+	box-shadow: 0 0 10px #000;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 500px;
+	height: 590px;
+  margin:70px 0px 0px 700px;
+}
+.formbox:before {
+	 
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	content: "";
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: -1;
+	display: block;
+	filter: blur(2px);
+}
+.formbox .heading {
+	font-size: 32px;
+	font-weight: 600;
+	padding-bottom: 30px;
+	text-align: center;
+}
+.formbox input {
+	margin: 10px 0px;
+	border: none;
+	padding: 10px;
+	border-radius: 5px;
+	width: 100%;
+	font-size: 18px;
+	font-family: poppins;
+}
+.formbox input[type=checkbox] {
+	display: none;
+}
+.formbox label {
+	position: relative;
+	margin-left: 5px;
+	margin-right: 10px;
+	top: 5px;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+}
+.formbox label:before {
+	content: "";
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border-radius: 5px;
+	position: absolute;
+	left: 0;
+	bottom: 1px;
+	background-color: #ddd;
+}
+.formbox input[type=checkbox]:checked+label:before {
+	content: "\2713";
+	font-size: 20px;
+	color: #000;
+	text-align: center;
+	line-height: 20px;
+}
+.formbox span {
+	font-size: 14px;
+}
+.formbox button {
+	background-color: blanchedalmond;
+	color:black;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	width: 100%;
+	font-size: 18px;
+	padding: 10px;
+	margin: 20px 0px;
+}
+.formbox button:hover{
+  background-color: black;
+  color: whitesmoke;
+}
+span a {
+	color: #BBB;
+} 
+#navbar{
+        position: sticky;
+        top:0px;
+        
+    }
+    #navbar ul{
+        display: flex;
+        list-style: none;
+        padding: 0px 0px 0px 1000px;
+    
+      
+    }
+    
+    #navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 110%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.7;
+    padding: 0px;
+}
+
+.logooo{
+     position:absolute;
+     left:20px;
+     top:5px;
+ }
+ .menudrop{
+  float: left;
+  overflow: hidden;
+  font-size: 0.8rem;
+}
+.menudrop:hover{
+    background-color:#F3C693 ;
+}
+
+.menudrop{
+	position: relative;
+	left: 100px;
+}
+
+.menudrop .menubtn {
+  font-size: 16px;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 8px 16px;
+    background-color:#F3C693 ;
+    font-family: inherit;
+    margin: 10px 100px;
+    border-radius: 10px;
+	position: relative;
+    left: 122px;
+}
+.menu-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  right: 210px;
+  
+}
+ 
+.menu-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.menu-content a:hover {
+  background-color: #ddd;
+}
+
+.menudrop:hover .menu-content {
+  display: block;
+}
+
+ </style>
+ <body>
+	<nav id="navbar">
+        
+        <ul class="items">
+            <div class="menudrop"> 
+            <li> <button class="menubtn" >Menu</button></li>
+            <div class="menu-content">
+              <a href="/home">HOME</a>
+              <a href="/gallery">OUR GALLERY</a>
+              <a href="/events">EVENTS</a>
+              <a href="/contact">CONTACT US</a>
+              </div>
+            </div>
+              <li class="logooo"> <img src=" https://thumbs.dreamstime.com/b/hm-logo-monogram-shield-shape-isolated-blue-colors-outline-design-template-179292471.jpg" alt="" height="40px" width="40px" ></li>
+            
+            
+            </ul>
+
+    </nav>
+ <div class="formbox">
+		<div class="heading">
+			signUp Form
+		</div>
+        <ul>
+            <% if(typeof errors!= 'undefined') { %>
+        <%    errors.forEach(error=>{ %>
+                <li><%= error.message %></li>
+     <%   }) %>    
+      <%     }   %>
+        </ul>
+    <form action="/signup" method="POST">
+        <input placeholder="Your name" type="text" name="name" required>
+        <input placeholder="your Batch" type="text" name="batch" required>
+        <input placeholder="current year" type="number" name="year" required>  
+        <input placeholder="Email Address" type="text" name="email" required>
+        <input placeholder="Your Password" type="password" name="password" required>
+        <input placeholder="confirm password" type="password" name="password2" required> 
+        <input type="submit" value="signup">
+        <a href="/login">Already registered? Login here</a>
+    </form>
+	</div>
+ </body>
+ </html>
