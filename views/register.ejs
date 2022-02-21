@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #05c46b;
+            font-family: Verdana;
+            text-align: center;
+        }
+
+        #navbar {
+            position: sticky;
+            top: 0px;
+
+        }
+
+        #navbar ul {
+            display: flex;
+            list-style: none;
+            padding: 0px 0px 0px 1000px;
+
+
+        }
+
+        .menubtn {
+            background-color: #F3C693;
+            margin: 10px 0px 0px 100px;
+            padding: 10px 30px;
+            border-radius: 10px;
+            font-family: 'Aclonica', sans-serif;
+        }
+
+        .menubtn:hover {
+            background-color: black;
+            color: blanchedalmond;
+        }
+
+        .logooo {
+            position: absolute;
+            left: 20px;
+            top: 5px;
+        }
+
+
+        #navbar::before {
+            content: "";
+            background-color: black;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 110%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.7;
+            padding: 0px;
+        }
+
+        form {
+            background-color: #fff;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px 20px;
+            box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+
+
+        .forming {
+            text-align: left;
+            margin-bottom: 25px;
+        }
+
+
+        .forming label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+
+
+        .forming input,
+        .forming select {
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            padding: 10px;
+            display: block;
+            width: 95%;
+        }
+
+
+        .forming input[type="radio"],
+        .forming input[type="checkbox"] {
+            display: inline-block;
+            width: auto;
+        }
+
+        button {
+            background-color: #05c46b;
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            font-size: 21px;
+            display: block;
+            width: 100%;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+    </style>
+
+<body>
+
+
+
+    <form action="/register" method="POST" id="form">
+
+
+        <div class="forming">
+            <label for="name" id="label-name">
+                Name
+            </label>
+
+
+            <input type="text" id="name" placeholder="Enter your name" name="name" required />
+        </div>
+
+        <div class="forming">
+            <label for="email" id="label-email">
+                Email
+            </label>
+
+            <input type="email" id="email" placeholder="Enter your email" name="email" required />
+        </div>
+
+        <div class="forming">
+            <label for="age" id="label-age">
+                Age
+            </label>
+
+
+            <input type="text" id="age" placeholder="Enter your age" name="age" required />
+        </div>
+
+        <div class="forming">
+            <label for="batch" id="batching">
+                Which batch are you from?
+            </label>
+
+
+            <select name="batch" id="batch" required>
+                <option value="CS">BCS</option>
+                <option value="MT">IMT</option>
+                <option value="MG">
+                    IMG
+                </option>
+                <option value="PG">IPG</option>
+            </select>
+        </div>
+
+
+        <div class="forming">
+            <label>What are the events you are interested in?
+                <small>(Check all that apply)</small>
+            </label>
+            <select name="events" id="events" required>
+                <option value="cook">cooking</option>
+                <option value="arts">art</option>
+                <option value="fash">fashion</option>
+                <option value="musi">music</option>
+            </select>
+        </div>
+        <input type="submit" value="submit">
+    </form>
+</body>
+
+</html>

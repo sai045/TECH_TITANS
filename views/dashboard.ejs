@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #navbar {
+        position: sticky;
+        top: 0px;
+
+    }
+
+    #navbar ul {
+        display: flex;
+        list-style: none;
+        padding: 0px 0px 0px 1000px;
+        margin: 0px;
+
+
+    }
+
+    #navbar ul li {
+        margin: 15px 25px;
+        font-size: 1.5rem;
+        border-radius: 10px;
+        color: white;
+    }
+
+    #navbar::before {
+        content: "";
+        background-color: black;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.5;
+        padding: 0px;
+    }
+
+    #navbar ul li button {
+        padding: 10px;
+        color: black;
+        border-radius: 16px;
+
+    }
+</style>
+
+<body>
+    <nav id="navbar">
+
+        <ul class="items">
+            <div class="menudrop">
+                <li> <button class="menubtn">Menu</button></li>
+                <div class="menu-content">
+                    <a href="/home">HOME</a>
+                    <a href="/gallery">OUR GALLERY</a>
+                    <a href="/event">EVENTS</a>
+                    <a href="/contact">CONTACT US</a>
+                </div>
+            </div>
+            <li class="logooo"> <img
+                    src=" https://thumbs.dreamstime.com/b/hm-logo-monogram-shield-shape-isolated-blue-colors-outline-design-template-179292471.jpg"
+                    alt="" height="40px" width="40px"></li>
+
+
+        </ul>
+
+    </nav>
+    <a href="/login">Logout</a>
+    <h1>Hello <%= user %>
+    </h1>
+
+    <h1>You have been registered to</h1>
+
+    <ul>
+        <li>
+            <%= events %>
+        </li>
+    </ul>
+</body>
+
+</html>
