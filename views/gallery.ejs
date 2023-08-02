@@ -2,202 +2,238 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery Page</title>
-    <link href="https://fonts.googleapis.com/css2?family=Kirang+Haerang&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kirang+Haerang&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
 </head>
 <style>
-    body {
-        margin: 0px;
-        padding: 0px;
-        background-image: url();
-    }
+  body {
+    margin: 0px;
+    padding: 0px;
+    background-image: url();
+  }
 
-    .head{
-        color: white;
-        font-family: 'Kirang Haerang', cursive;
-    }
-    .container {
-        height: 195vh;
-        width: 100vw;
-        border: 2px solid black;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: black;
-        background-repeat: no-repeat;
-        background-attachment: local;
-        background-size: cover;
-    }
+  .head {
+    color: white;
+    font-family: 'Kirang Haerang', cursive;
+  }
 
-    .art,.cooking,.fashion,.music {
-        height: 145px;
-        width: 95vw;
-        border-radius: 12px;
-        margin: 20px;
-        padding: 20px;
-        border: 2px solid rgb(255, 255, 255)
-    }
+  .container {
+    /* height: 195vh; */
+    width: 98vw;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-size: cover;
+  }
 
-    .heading{
-        display: flex;
-        flex-direction: row;
-        font-family: 'Varela Round', sans-serif;
-        font-size: 23px;
-    }
+  .art,
+  .cooking,
+  .fashion,
+  .music {
+    height: 145px;
+    width: 95vw;
+    border-radius: 12px;
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid rgb(255, 255, 255)
+  }
 
-    .img{
-        position: absolute;
-        left: 56px;
-        top: 13px;
-    }
+  .heading {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 23px;
+  }
 
-    img{
-        border-radius: 25px;
-        margin: 3px;
-        padding: 1px;
-    }
+  .img {
+    position: absolute;
+    left: 56px;
+    top: 13px;
+  }
 
-    h3{
-        border: 2px solid black;
-        border-radius: 18px;
-        padding: 10px;
-        backdrop-filter: grayscale(1);
-        background: burlywood;
-        font-family: 'Kirang Haerang', cursive;
-    }
-    .header{
-      background: transparent;
-      width: 100%;
-      height: 60PX;
-      position: fixed;
-      z-index: 10;
-    }
+  img {
+    width: 19%;
+    border-radius: 25px;
+    margin: 3px;
+    padding: 1px;
+  }
 
+  h3 {
+    border: 2px solid black;
+    border-radius: 18px;
+    padding: 10px;
+    backdrop-filter: grayscale(1);
+    background: burlywood;
+    font-family: 'Kirang Haerang', cursive;
+  }
 
-    #sidebarMenu{
-      height: 100%;
-      position: fixed;
-      z-index: 20;
-      left: 0;
-      top: 0;
-      width: 250px;
-      margin-top: 60px;
-      background: black;
-      transform: translateX(-250px);
-      transition: transform 250ms ease-in-out
-    }
-
-    #openSidebarMenu:checked ~ #sidebarMenu{
-      transform: translateX(0px);
-    }
-    .menu {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .menu li{
-      color: #fff;
-      border-bottom: 2px solid #ffffff;
-    }
-    .menu li a{
-      color: #fff;
-      display: block;
-      text-decoration: none;
-      text-transform: uppercase;
-      padding: 20px;
-    }
-
-    .sidebarIconToggle{
-      width: 22px;
-      height: 22px;
-      position: absolute;
-      z-index: 20;
-      top: 22px;
-      left: 15px;
-      cursor: pointer;
-    }
-    .spinner{
-      height: 3px;
-      background: black;
-      transition: all 0.3s;
-    }
-    .spinner.middle,
-    .spinner.bottom{
-      margin-top: 3px;
-    }
-      #openSidebarMenu:checked ~ .sidebarIconToggle > .spinner.middle{
-        opacity: 0;
-      }
-      #openSidebarMenu:checked ~ .sidebarIconToggle > .spinner.top{
-        transform: rotate(135deg);
-        margin-top: 8px;
-      }
-      #openSidebarMenu:checked ~ .sidebarIconToggle > .spinner.bottom{
-        transform: rotate(-135deg);
-        margin-top: -9px;
-      }
-</style>
-
-<style id="web-inspector-hide-shortcut-style">
-  .web-inspector-hide-shortcut, .web-inspector-hide-shortcut *,
-  .web-inspector-hidebefore-shortcut::before, .web-inspector-hideafter-shortcut::after
-  {
-    visibility: hidden !important;
+  .header {
+    background: transparent;
+    width: 100%;
+    height: 60PX;
+    position: fixed;
+    z-index: 10;
   }
 
 
- </style>
- <body>
-    <div class="cont">
+  #sidebarMenu {
+    height: 100%;
+    position: fixed;
+    z-index: 20;
+    left: 0;
+    top: 0;
+    width: 250px;
+    margin-top: 60px;
+    background: black;
+    transform: translateX(-250px);
+    transition: transform 250ms ease-in-out
+  }
+
+  #openSidebarMenu:checked~#sidebarMenu {
+    transform: translateX(0px);
+  }
+
+  .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu li {
+    color: #fff;
+    border-bottom: 2px solid #ffffff;
+  }
+
+  .menu li a {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 20px;
+  }
+
+  .sidebarIconToggle {
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    z-index: 20;
+    top: 22px;
+    left: 15px;
+    cursor: pointer;
+  }
+
+  .spinner {
+    height: 3px;
+    background: black;
+    transition: all 0.3s;
+  }
+
+  .spinner.middle,
+  .spinner.bottom {
+    margin-top: 3px;
+  }
+
+  #openSidebarMenu:checked~.sidebarIconToggle>.spinner.middle {
+    opacity: 0;
+  }
+
+  #openSidebarMenu:checked~.sidebarIconToggle>.spinner.top {
+    transform: rotate(135deg);
+    margin-top: 8px;
+  }
+
+  #openSidebarMenu:checked~.sidebarIconToggle>.spinner.bottom {
+    transform: rotate(-135deg);
+    margin-top: -9px;
+  }
+</style>
+
+<style id="web-inspector-hide-shortcut-style">
+  .web-inspector-hide-shortcut,
+  .web-inspector-hide-shortcut *,
+  .web-inspector-hidebefore-shortcut::before,
+  .web-inspector-hideafter-shortcut::after {
+    visibility: hidden !important;
+  }
+</style>
+
+<body>
+  <div class="cont">
     <div class="container">
-        <div class="heading">
-            
-            <div class="head">
-                <h1>souvenirs of <i>Hi Matsuri</i></h1>
-            </div>
-        </div>
-        <h3>Ongaku konkūru</h3>
-        <div class="music">
-            <img src="https://gwalior.iiitiansnetwork.com/img/gwalior/fest-slider/fest-2.jpg" alt="" height="150px" width="300px">
-            <img src="https://d49r1np2lhhxv.cloudfront.net/www/admin/uploads/images/Top50MusicFestivalsintheWorld_UMF.jpg" alt="" height="150px" width="300px">
-            <img src="https://d49r1np2lhhxv.cloudfront.net/www/admin/uploads/images/Top50MusicFestivalsintheWorld_ACL.jpg" alt="" height="150px" width="300px">
-            <img src="https://image.freepik.com/free-vector/music-festival-brochure-with-guitar_23-2147592362.jpg" alt="" height="150px" width="200px">
-            <img src="https://1.bp.blogspot.com/-uviyhXBfFXM/XaSu-JWgx4I/AAAAAAAAU1M/mlhdkncaK7YXVXBPMnNAdlkSXDUC7BzCwCLcBGAsYHQ/s640/12.jpg" alt="" height="150px" width="300px">
-        </div>
-        <h3>Ryōri kontesuto</h3>
-        <div class="cooking">
+      <div class="heading">
 
-            <img src="https://cf.bstatic.com/data/xphoto/1182x887/458/45868557.jpg?size=S" alt="" height="150px" width="300px">
-            <img src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_412,c_fill,g_auto,h_232,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F160516102301-7223913590-f1b58f800a-k-1.jpg" alt="" height="150px" width="300px">
-            <img src="https://cf.bstatic.com/data/xphoto/1182x887/458/45868534.jpg?size=S" alt="" height="150px" width="300px">
-            <img src="https://punampaul.com/wp-content/uploads/2019/04/Mughlai-Chicken-Biryani-500x360.jpg" alt="" height="150px" width="300px">
-            <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/07/18/33/e7.jpg" alt="" height="150px" width="200px">
+        <div class="head">
+          <h1>souvenirs of <i>Hi Matsuri</i></h1>
         </div>
-        <h3>Fasshonshō</h3>
-        <div class="fashion">
+      </div>
+      <h3>Ongaku konkūru</h3>
+      <div class="music">
+        <img src="https://gwalior.iiitiansnetwork.com/img/gwalior/fest-slider/fest-2.jpg" alt="" height="150px"
+          width="300px">
+        <img src="https://d49r1np2lhhxv.cloudfront.net/www/admin/uploads/images/Top50MusicFestivalsintheWorld_UMF.jpg"
+          alt="" height="150px" width="300px">
+        <img src="https://d49r1np2lhhxv.cloudfront.net/www/admin/uploads/images/Top50MusicFestivalsintheWorld_ACL.jpg"
+          alt="" height="150px" width="300px">
+        <img src="https://image.freepik.com/free-vector/music-festival-brochure-with-guitar_23-2147592362.jpg" alt=""
+          height="150px" width="200px">
+        <img
+          src="https://1.bp.blogspot.com/-uviyhXBfFXM/XaSu-JWgx4I/AAAAAAAAU1M/mlhdkncaK7YXVXBPMnNAdlkSXDUC7BzCwCLcBGAsYHQ/s640/12.jpg"
+          alt="" height="150px" width="300px">
+      </div>
+      <h3>Ryōri kontesuto</h3>
+      <div class="cooking">
 
-            <img src="http://rvrjcce.ac.in/coloridos2011/site/wp-content/uploads/2011/12/ramp1.jpg" alt="" height="150px" width="300px">
-            <img src="https://i.pinimg.com/736x/4f/22/62/4f2262f839f7cb19afbb12199960329f.jpg" alt="" height="150px" width="200px">
-            <img src="https://t2conline.com/wp-content/uploads/2019/06/1.png" alt="" height="150px" width="300px">
-            <img src="https://stylecaster.com/wp-content/uploads/2019/08/cowboy-hat-is-gucci-feat.jpg" alt="" height="150px" width="300px">
-            <img src="https://www.suitsexpert.com/wp-content/uploads/2019/04/men-suit-styles-differences-and-types.jpg" alt="" height="150px" width="300px">
-        </div>
-        <h3>Ātokonpetishon</h3>
-        <div class="art">
-            <img src="https://static.toiimg.com/thumb/msid-80186468,width-800,height-600,resizemode-75,imgsize-375686,pt-32,y_pad-40/80186468.jpg" alt="" height="150px" width="300px">
-            <img src="https://image.isu.pub/190430152235-853e656eebf7380bb9101869cf21af26/jpg/page_1.jpg" alt="" height="150px" width="200px">
-            <img src="https://www.artfulhome.com/item_images/RP/75001-75100/75051/large/giclee_print_l.jpg" alt="" height="150px" width="300px">
-            <img src="https://images.unsplash.com/photo-1602738328654-51ab2ae6c4ff?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c2tldGNoJTIwYXJ0fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" alt="" height="150px" width="300px">
-            <img src="https://i.redd.it/tz1wl0djogd61.png" alt="" height="150px" width="303px">
-        </div>
+        <img src="https://cf.bstatic.com/data/xphoto/1182x887/458/45868557.jpg?size=S" alt="" height="150px"
+          width="300px">
+        <img
+          src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_412,c_fill,g_auto,h_232,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F160516102301-7223913590-f1b58f800a-k-1.jpg"
+          alt="" height="150px" width="300px">
+        <img src="https://cf.bstatic.com/data/xphoto/1182x887/458/45868534.jpg?size=S" alt="" height="150px"
+          width="300px">
+        <img src="https://punampaul.com/wp-content/uploads/2019/04/Mughlai-Chicken-Biryani-500x360.jpg" alt=""
+          height="150px" width="300px">
+        <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/07/18/33/e7.jpg" alt="" height="150px"
+          width="200px">
+      </div>
+      <h3>Fasshonshō</h3>
+      <div class="fashion">
+
+        <img src="http://rvrjcce.ac.in/coloridos2011/site/wp-content/uploads/2011/12/ramp1.jpg" alt="" height="150px"
+          width="300px">
+        <img src="https://i.pinimg.com/736x/4f/22/62/4f2262f839f7cb19afbb12199960329f.jpg" alt="" height="150px"
+          width="200px">
+        <img src="https://t2conline.com/wp-content/uploads/2019/06/1.png" alt="" height="150px" width="300px">
+        <img src="https://stylecaster.com/wp-content/uploads/2019/08/cowboy-hat-is-gucci-feat.jpg" alt="" height="150px"
+          width="300px">
+        <img src="https://www.suitsexpert.com/wp-content/uploads/2019/04/men-suit-styles-differences-and-types.jpg"
+          alt="" height="150px" width="300px">
+      </div>
+      <h3>Ātokonpetishon</h3>
+      <div class="art">
+        <img
+          src="https://static.toiimg.com/thumb/msid-80186468,width-800,height-600,resizemode-75,imgsize-375686,pt-32,y_pad-40/80186468.jpg"
+          alt="" height="150px" width="300px">
+        <img src="https://image.isu.pub/190430152235-853e656eebf7380bb9101869cf21af26/jpg/page_1.jpg" alt=""
+          height="150px" width="200px">
+        <img src="https://www.artfulhome.com/item_images/RP/75001-75100/75051/large/giclee_print_l.jpg" alt=""
+          height="150px" width="300px">
+        <img
+          src="https://images.unsplash.com/photo-1602738328654-51ab2ae6c4ff?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c2tldGNoJTIwYXJ0fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80"
+          alt="" height="150px" width="300px">
+        <img src="https://i.redd.it/tz1wl0djogd61.png" alt="" height="150px" width="303px">
+      </div>
 
     </div>
-</div>
+  </div>
 </body>
 
 </html>

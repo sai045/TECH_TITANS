@@ -5,18 +5,20 @@ const bcrypt = require("bcrypt");
 const flash = require("express-flash");
 const passport = require("passport");
 const session = require("express-session");
-// const bodyparser = require("body-parser");
+const bodyparser = require("body-parser");
+const path = require("path");
 
 const initializePassport = require("./passportConfig");
 const { Events } = require("pg");
 
 initializePassport(passport);
 
-// app.use(bodyparser);
+app.use(bodyparser.json());
 
+app.set("views", path.join(__dirname, "views"));
+// console.log(path.join(__dirname, "views"))
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: false }));
-
 app.use(
   session({
     secret: "secret",
@@ -124,7 +126,6 @@ app.post("/signup", async (req, res) => {
         console.log(results.rows);
 
         if (results.rows.length > 0) {
-          errors.push({ message: "email already registered" });
           res.render("signup", { errors });
         } else {
           pool.query(
